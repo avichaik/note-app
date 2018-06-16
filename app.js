@@ -15,9 +15,11 @@ var command  = process.argv[2];
 if(command=== 'add'){
     notes.addNote(argv.title,argv.body);
 }else if(command=== 'list'){
-    notes.getAll();
+   var notesString =  notes.getAll();
+   console.log(notesString);
 }else if(command=== 'remove'){
     notes.removeNote(argv.title);
+    
 }
 else {
     console.log('none');
